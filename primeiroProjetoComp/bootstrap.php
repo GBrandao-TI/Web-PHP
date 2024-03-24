@@ -181,7 +181,88 @@ $r->post("/exer6/resposta", function(){
     }
 });
 
+#############
 
+#Exercício 7
+
+$r->get("/exer7/formulario", function(){
+    include("exer7.html");
+});
+
+$r->post("/exer7/resposta", function(){
+    $m = $_POST["valor"];
+    return $m. "m equivale a: ". 100 * $m. " cm (centímetros)";
+});
+
+###########
+
+#Exercício 8
+$r->get("/exer8/formulario", function(){
+    include("exer8.html");
+});
+
+$r->post("/exer8/resposta", function(){
+    $area = $_POST['area'];
+    $litro = $area / 3;
+    $lata = 18;
+    $precoLata = 80;
+    $qtdeLatas = ceil($litro/ $lata);
+    $total = $qtdeLatas * $precoLata;
+
+    echo"Quantidade de Litros necessários: ".$litro. "<br>
+        Quantidade de Latas necessárias: ".$qtdeLatas. "<br>
+        Valor unitário da lata: ".$lata."<br>
+        Valor Total: ".$total;
+});
+###########
+
+#Exercício 9
+$r->get("/exer9/formulario", function(){
+    include("exer9.html");
+});
+
+$r->post("/exer9/resposta", function(){
+    $anoNascimento = $_POST['anoNascimento'];
+    $anoAtual = 2024;
+    $idade = $anoAtual - $anoNascimento;
+    $diasVividos = $idade * 365;
+    $idade2025 = $idade + 1;
+
+    echo "Idade: {$idade}<br>
+        Dias vividos: {$diasVividos}<br>
+        Idade em 2025: {$idade2025}";
+
+});
+#############
+
+#Exercício 10
+$r->get("/exer10/formulario", function(){
+    include("exer10.html");
+});
+
+$r->post("/exer10/resposta", function(){
+    $altura = $_POST['altura'];
+    $peso = $_POST['peso'];
+    $imc = $peso / (pow($altura, 2));
+
+    if($imc < 18.5){
+        echo $imc. " <br> Abaixo do peso";
+    }
+    elseif($imc >= 18.5 && $imc <= 24.9){
+        echo $imc. " <br> Peso ideal";
+    }
+    elseif($imc >= 25 && $imc <= 29.9){
+        echo $imc. " <br> Sobrepeso I";
+    }
+    elseif($imc >= 30 && $imc <= 39.9){
+        echo $imc. " <br> Obsidade grau II";
+    }
+    elseif($imc > 40){
+        echo $imc. " <br> Obsidade grau III";
+    }
+
+    return "<br>Fonte do cálculo do IMC: <a href= 'https://www.programasaudefacil.com.br/calculadora-de-imc'>clique aqui</a>";
+});
 
 
 #ROTAS
