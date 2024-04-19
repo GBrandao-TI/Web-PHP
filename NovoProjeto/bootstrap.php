@@ -41,6 +41,9 @@ $r->get('/instrutor/inserir', 'Php\Primeiroprojeto\Controllers\InstrutorControll
 $r->post('/instrutor/novo', 'Php\Primeiroprojeto\Controllers\InstrutorController@novo');
 
 //Rota Veículo
+$r->get('/veiculo/inserir','Php\Primeiroprojeto\Controllers\VeiculoController@inserir');
+
+$r->post('/veiculo/novo', 'Php\Primeiroprojeto\Controllers\VeiculoController@novo');
 
 //Rota Depesas
 $r->get('/despesa/inserir','Php\Primeiroprojeto\Controllers\DespesaController@inserir');
