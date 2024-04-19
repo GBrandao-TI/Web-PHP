@@ -23,11 +23,11 @@ $r->get('/olapessoa/{nome}', function($params){
 
 // Categoria
 
-// Chamando o formulário para inserir categoria
-$r->get('/categoria/inserir', 'Php\Primeiroprojeto\Controllers\CategoriaController@inserir');
+// // Chamando o formulário para inserir categoria
+// $r->get('/categoria/inserir', 'Php\Primeiroprojeto\Controllers\CategoriaController@inserir');
 
-// Enviando os dados para serem armazenados no banco de dados
-$r->post('/categoria/novo', 'Php\Primeiroprojeto\Controllers\CategoriaController@novo');
+// // Enviando os dados para serem armazenados no banco de dados
+// $r->post('/categoria/novo', 'Php\Primeiroprojeto\Controllers\CategoriaController@novo');
 
 
 // Rota Aluno

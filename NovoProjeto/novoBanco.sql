@@ -62,16 +62,6 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Despesas` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `mydb`.`categoria`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`categoria` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `descricao` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
