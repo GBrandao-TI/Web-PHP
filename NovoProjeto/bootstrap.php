@@ -35,6 +35,19 @@ $r->get('/aluno/inserir', 'Php\Primeiroprojeto\Controllers\AlunoController@inser
 
 $r->post('/aluno/novo', 'Php\Primeiroprojeto\Controllers\AlunoController@novo');
 
+        //rota para o select
+$r->get('/aluno', 'Php\Primeiroprojeto\Controllers\AlunoController@index');
+        //se tiver inserido, alterado ou excluído
+$r->get('/aluno/{acao}/{status}', 'Php\Primeiroprojeto\Controllers\AlunoController@index');
+
+$r->get('/aluno/alterar/id/{id}', 'Php\Primeiroprojeto\Controllers\AlunoController@alterar');
+
+$r->post('/aluno/editar', "Php\Primeiroprojeto\Controllers\AlunoController@editar");
+
+$r->post('/aluno/deletar', "Php\Primeiroprojeto\Controllers\AlunoController@deletar");
+
+$r->get('/aluno/excluir/id/{id}', 'Php\Primeiroprojeto\Controllers\AlunoController@excluir');
+
 //Rota Instrutor
 $r->get('/instrutor/inserir', 'Php\Primeiroprojeto\Controllers\InstrutorController@inserir');
 
