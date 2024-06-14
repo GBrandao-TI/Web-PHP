@@ -49,17 +49,22 @@ $r->post('/aluno/deletar', "Php\Primeiroprojeto\Controllers\AlunoController@dele
 $r->get('/aluno/excluir/id/{id}', 'Php\Primeiroprojeto\Controllers\AlunoController@excluir');
 
 //Rota Instrutor
+$r->get('/instrutor/inserir', 'Php\Primeiroprojeto\Controllers\InstrutorController@inserir');
+
+$r->post('/instrutor/novo', 'Php\Primeiroprojeto\Controllers\InstrutorController@novo');
+
 $r->get('/instrutor', 'Php\Primeiroprojeto\Controllers\InstrutorController@index');
 
 $r->get('/instrutor/{acao}/{status}', 'Php\Primeiroprojeto\Controllers\InstrutorController@index');
 
 $r->get('/instrutor/alterar/id/{id}', 'Php\Primeiroprojeto\Controllers\InstrutorController@alterar');
 
-$r->post('/instrutor/editar', 'Php\Primeiroprojeto\Controllers\InstrutorController@editar');
+$r->post('/instrutor/editar', "Php\Primeiroprojeto\Controllers\InstrutorController@editar");
 
-$r->post('/instrutor/deletar', 'Php\Primeiroprojeto\Controllers\InstrutorController@deletar');
+$r->post('/instrutor/deletar', "Php\Primeiroprojeto\Controllers\InstrutorController@deletar");
 
 $r->get('/instrutor/excluir/id/{id}', 'Php\Primeiroprojeto\Controllers\InstrutorController@excluir');
+
 
 
 //Rota Veículo
