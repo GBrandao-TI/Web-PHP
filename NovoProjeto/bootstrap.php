@@ -49,19 +49,46 @@ $r->post('/aluno/deletar', "Php\Primeiroprojeto\Controllers\AlunoController@dele
 $r->get('/aluno/excluir/id/{id}', 'Php\Primeiroprojeto\Controllers\AlunoController@excluir');
 
 //Rota Instrutor
-$r->get('/instrutor/inserir', 'Php\Primeiroprojeto\Controllers\InstrutorController@inserir');
+$r->get('/instrutor', 'Php\Primeiroprojeto\Controllers\InstrutorController@index');
 
-$r->post('/instrutor/novo', 'Php\Primeiroprojeto\Controllers\InstrutorController@novo');
+$r->get('/instrutor/{acao}/{status}', 'Php\Primeiroprojeto\Controllers\InstrutorController@index');
+
+$r->get('/instrutor/alterar/id/{id}', 'Php\Primeiroprojeto\Controllers\InstrutorController@alterar');
+
+$r->post('/instrutor/editar', 'Php\Primeiroprojeto\Controllers\InstrutorController@editar');
+
+$r->post('/instrutor/deletar', 'Php\Primeiroprojeto\Controllers\InstrutorController@deletar');
+
+$r->get('/instrutor/excluir/id/{id}', 'Php\Primeiroprojeto\Controllers\InstrutorController@excluir');
+
 
 //Rota Veículo
-$r->get('/veiculo/inserir','Php\Primeiroprojeto\Controllers\VeiculoController@inserir');
+$r->get('/veiculo', 'Php\Primeiroprojeto\Controllers\VeiculoController@index');
 
-$r->post('/veiculo/novo', 'Php\Primeiroprojeto\Controllers\VeiculoController@novo');
+$r->get('/veiculo/{acao}/{status}', 'Php\Primeiroprojeto\Controllers\VeiculoController@index');
+
+$r->get('/veiculo/alterar/id/{id}', 'Php\Primeiroprojeto\Controllers\VeiculoController@alterar');
+
+$r->post('/veiculo/editar', 'Php\Primeiroprojeto\Controllers\VeiculoController@editar');
+
+$r->post('/veiculo/deletar', 'Php\Primeiroprojeto\Controllers\VeiculoController@deletar');
+
+$r->get('/veiculo/excluir/id/{id}', 'Php\Primeiroprojeto\Controllers\VeiculoController@excluir');
+
 
 //Rota Depesas
-$r->get('/despesa/inserir','Php\Primeiroprojeto\Controllers\DespesaController@inserir');
+$r->get('/despesa', 'Php\Primeiroprojeto\Controllers\DespesaController@index');
 
-$r->post('/despesa/novo', 'Php\Primeiroprojeto\Controllers\DespesaController@novo');
+$r->get('/despesa/{acao}/{status}', 'Php\Primeiroprojeto\Controllers\DespesaController@index');
+
+$r->get('/despesa/alterar/id/{id}', 'Php\Primeiroprojeto\Controllers\DespesaController@alterar');
+
+$r->post('/despesa/editar', 'Php\Primeiroprojeto\Controllers\DespesaController@editar');
+
+$r->post('/despesa/deletar', 'Php\Primeiroprojeto\Controllers\DespesaController@deletar');
+
+$r->get('/despesa/excluir/id/{id}', 'Php\Primeiroprojeto\Controllers\DespesaController@excluir');
+
 
 
 //ROTAS
